@@ -1,0 +1,19 @@
+NAME="azy"
+VERSION=1.0.0.76007
+RELEASE=1
+CATEGORY="Net"
+SUMMARY="Enlightenment RPC library"
+DESCRIPTION="Azy is a full rewrite of libzxr, itself a modification of libxr. It
+provides functions for manipulating RPC clients/servers as well as RSS feeds."
+HOMEPAGE="http://www.enlightenment.org/"
+SVN_URI="http://svn.enlightenment.org/svn/e"
+SVN_BRANCH="trunk/PROTO/${NAME}"
+SVN_REV=${PV[4]}
+SVN_MODULE=${SVN_BRANCH##*/}
+inherit svn
+
+PKG_NAMES="libazy09_1 libazy-devel"
+libazy09_1_CONTENTS="usr/bin/cygazy-*-09-1.dll"
+libazy_devel_CONTENTS="usr/bin/azy_parser.exe usr/include/ usr/lib/ usr/share/doc/"
+
+KEEP_LA_FILES="none"
